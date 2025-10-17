@@ -16,13 +16,15 @@ public final class App {
         System.out.println();
         System.out.println();
         long inicio = System.nanoTime();
-        System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_recursivo(numero));
+        System.out.printf("Término %s\n", numero);
+        System.out.println("----------");
+        System.out.printf("Cálculo recursivo:     %s", fibonacci_recursivo(numero));
         long fin = System.nanoTime();
-        System.out.printf("La operación ha tardado %s nanosegundos\n", fin - inicio);
+        System.out.printf(" - %s nanosegundos\n", fin - inicio);
         long inicio2 = System.nanoTime();
-        System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_formula(numero));
+        System.out.printf("Cálculo fórmula:       %s", fibonacci_recursivo(numero));
         long fin2 = System.nanoTime();
-        System.out.printf("La operación ha tardado %s nanosegundos\n", fin2 - inicio2);
+        System.out.printf(" - %s nanosegundos\n", fin2 - inicio2);
         System.out.println();
         System.out.println();
     }
