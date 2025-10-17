@@ -12,13 +12,17 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        int numero = 4;
+        int numero = 40;
         System.out.println();
         System.out.println();
         long inicio = System.nanoTime();
         System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_recursivo(numero));
         long fin = System.nanoTime();
         System.out.printf("La operación ha tardado %s nanosegundos\n", fin - inicio);
+        long inicio2 = System.nanoTime();
+        System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_formula(numero));
+        long fin2 = System.nanoTime();
+        System.out.printf("La operación ha tardado %s nanosegundos\n", fin2 - inicio2);
         System.out.println();
         System.out.println();
     }
@@ -29,5 +33,12 @@ public final class App {
         } else {
             return fibonacci_recursivo(numero - 1) + fibonacci_recursivo(numero - 2);
         }
+    }
+
+    static int fibonacci_formula(int numero) {
+        double raiz_de_5 = Math.sqrt(5);
+        double phi = (1 + raiz_de_5) / 2;
+        double psi = (1 - raiz_de_5) / 2;
+        return (int) ((Math.pow(phi, numero - 1) - Math.pow(psi, numero - 1)) / raiz_de_5);
     }
 }
