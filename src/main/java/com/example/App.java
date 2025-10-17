@@ -9,6 +9,7 @@ public final class App {
 
     /**
      * Says hello to the world.
+     * 
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
@@ -16,13 +17,16 @@ public final class App {
         System.out.println();
         System.out.println();
         long inicio = System.nanoTime();
-        System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_recursivo(numero));
+        System.out.printf("Termino %s\n", numero);
+        System.out.println("----------");
+        System.out.printf("Calculo recursivo:       %s", fibonacci_recursivo(numero));
         long fin = System.nanoTime();
-        System.out.printf("La operación ha tardado %s nanosegundos\n", fin - inicio);
+        System.out.printf(" - %s nanosegundos\n", fin - inicio);
         long inicio2 = System.nanoTime();
-        System.out.printf("El término %s de la serie de Fibonacci es %s\n", numero, fibonacci_formula(numero));
+        System.out.println();
+        System.out.printf("Calculo formula:         %s", fibonacci_formula(numero));
         long fin2 = System.nanoTime();
-        System.out.printf("La operación ha tardado %s nanosegundos\n", fin2 - inicio2);
+        System.out.printf(" - %s nanosegundos\n", fin2 - inicio2);
         System.out.println();
         System.out.println();
     }
